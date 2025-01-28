@@ -1,16 +1,16 @@
-//  import mongoose from "mongoose";
+ import mongoose from "mongoose";
  
  
-//  const validateMongoIdFromParams=(req, res, next)=>{
-//  const productId = req.params.id;
+ const validateMongoIdFromParams=(req, res, next)=>{
+ const productId = req.params.id;
 
-//     const productIDIsValid = mongoose.isValidObjectId(productId);
+    const productIDIsValid = mongoose.isValidObjectId(productId);
 
-//     if (!productIDIsValid) {
-//       return res.status(400).send({ message: 'Invalid product id.' });
-//     }
+    if (!productIDIsValid) {
+      return res.status(400).send({ message: 'Invalid product id.' });
+    }
 
-//     next();
-// };
+    next();
+};
 
-// export {validateMongoIdFromParams}
+export {validateMongoIdFromParams}
