@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 import dbConnect from "./db.connection.js";
 import {userController} from "./user/user.controller.js";
 import { productController } from "./product/product.controller.js";
+import cors from "cors"
 //backend app 
 const app = express();
 
 //to make app understand
 app.use(express.json());
+app.use(cors());
 
 //database connections
 dbConnect();
